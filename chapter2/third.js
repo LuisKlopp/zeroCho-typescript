@@ -1,50 +1,25 @@
-"use strict";
+'use strict';
 // type A = { name: string };
 // type B = { age: number };
-// function a(): void {}
-// interface Human {
-//   talk: () => void;
-// }
-// const human: Human = {
-//   talk() {
-//     return 'abc';
-//   },
-// };
-// declare function forEach(arr: number[], callback: (el: number) => void): void;
-// let target: number[] = [];
-// forEach([1, 2, 3], (el) => target.push(el));
-// function numOrStr(a: number | string) {
-//   if (typeof a === 'number') {
-//     a.toFixed(1);
-//     console.log(1);
-//   } else {
-//     a.charAt(3);
-//     console.log(a);
-//   }
-// }
-// numOrStr('123');
-// numOrStr(1);
-function numOrStr(a) {
-    if (typeof a === 'number') {
-        a.toFixed(1);
-        console.log(1);
-    }
-    else {
-        a.charAt(3);
-        console.log(a);
-    }
-}
-numOrStr('123');
-numOrStr(1);
-const aaaa = { Human: 'Animal', Mammal: 'Mammal', Animal: 'Mammal' };
-function abc(a, b, c) { }
-abc(1);
-abc(1, 2);
-abc(1, 2, 3);
-function add(x, y) {
-    return x + y;
-}
-add(1, 2);
-add(1, 2);
-add('1', '2');
-add('1', '2');
+const forEach_a = [1, 2, 3];
+forEach_a.forEach((item, index) => {
+  console.log(item, index);
+  item.toFixed(1);
+});
+forEach_a.forEach((item) => {
+  console.log(item);
+  return '3';
+});
+const forEach_b = ['1', '2', '3'];
+forEach_b.forEach((item) => {
+  console.log(item);
+  item.charAt(3);
+});
+const map_a = [1, 2, 3];
+const map_b = map_a.map((v, i) => v + 1);
+const map_c = map_a.map((v, i) => v.toString());
+const map_d = map_a.map((v, i) => v % 2 === 0);
+const map_e = ['1', '2', '3'];
+const map_f = map_e.map((v) => +v);
+
+console.log(map_a, map_b, map_c, map_d, map_e, map_f);
